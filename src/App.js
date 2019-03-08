@@ -45,6 +45,7 @@ import RNMessageChannel from 'react-native-webview-messaging';
 
 
 import bufficorn from './bufficorn.png';
+import affogatoToken from "./affogato-token-logo.png";
 import cypherpunk from './cypherpunk.png';
 import eth from './ethereum.png';
 import dai from './dai.jpg';
@@ -136,8 +137,15 @@ else if (window.location.hostname.indexOf("buffidai") >= 0) {
   ERC20TOKEN = 'ERC20Vendable'
   ERC20IMAGE = bufficorn
   LOADERIMAGE = bufficorn
-}
-else if (window.location.hostname.indexOf("burnerwallet.io") >= 0) {
+} else if (window.location.hostname.indexOf("app.affogatonetwork.com") >= 0) {
+  WEB3_PROVIDER = POA_XDAI_NODE;
+  CLAIM_RELAY = 'https://x.xdai.io'
+  ERC20NAME = 'KFE'
+  ERC20VENDOR = 'VendingMachine'
+  ERC20TOKEN = 'ERC20Vendable'
+  ERC20IMAGE = affogatoToken
+  LOADERIMAGE = affogatoToken
+} else if (window.location.hostname.indexOf("burnerwallet.io") >= 0) {
   WEB3_PROVIDER = POA_XDAI_NODE;
   CLAIM_RELAY = 'https://x.xdai.io'
   ERC20NAME = 'BURN'
@@ -152,7 +160,6 @@ else if (window.location.hostname.indexOf("burnerwithrelays") >= 0) {
   ERC20TOKEN = false
   ERC20IMAGE = false
 }
-
 
 if (ERC20NAME == "BUFF") {
   mainStyle.backgroundImage = "linear-gradient(#540d48, #20012d)"
